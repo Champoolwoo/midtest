@@ -77,8 +77,8 @@
 				<div class="panel-body">
 					<div class="radio">
 						<label ng-repeat="book in bookharry" class="col-xs-4 col-md-4 col-sm-4 col-lg-4">
-							<section class="box" ng-click="add(book)" id="b{{$index+1}}">
-							  <img ng-src="img/{{book.img}}" class="img-responsive">
+							<section class="box" ng-click="add(book)">
+							  <img ng-src="img/{{book.img}}" id="b{{$index+1}} class="img-responsive">
 							</section>
 						</label>
 					</div>
