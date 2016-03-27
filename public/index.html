@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html ng-app="bookApp">
+<head>
+	<!--<script src="node_modules/angular/angular.min.js"></script>-->
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular.min.js"></script>
+	<script src="js/index.js"></script>
+	<meta charset="UTF-8">
+	<title>Ban9Jin</title>
+
+	<link rel="stylesheet" href="css/style.css">
+
+	<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+
+
+</head>
+<body ng-controller="booktControl">
+
+<!--
+	<div class="container-fluid">
+		<table>
+			<tr ng-repeat="book in bookharry">
+				<td>
+					<section class="box" ng-click="add(book)">
+					  <img ng-src="./img/{{book.img}}" >
+					</section>
+				</td>
+			</tr>
+		</table>
+
+	</div>
+
+	<table>
+		<tr ng-repeat="buy in selectbook">
+			<td>
+				{{buy.namebook}}
+			</td>
+			<td>
+				{{buy.price}} ฿
+			</td>
+			<td>
+				<button ng-click="deletebook($index)">Delete</button>
+			</td>
+			<td>{{buy.amount}}</td>
+
+		</tr>
+	</table>
+
+<li>ราคาทั้งหมด : {{sumprice}} ฿</li>
+<li>ส่วนลด : {{sell}} ฿</li>
+<li>ราคาที่จ่าย : {{sumprice-sell}} ฿</li>
+
+-->
+
+<div class="header">
+  <div class="row">
+    <div class="large-12 columns main">
+      <div class="logo"><center><h1>Ban9Jin</h1><h3>Harry potter Collection Books</h3></center></div>
+			<hr>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="col-xs-7 col-md-8 col-sm-8 col-lg-8">
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+				   <h3 class="panel-title">รายการหนังสือ</h3>
+				</div>
+				<div class="panel-body">
+					<div class="radio">
+						<label ng-repeat="book in bookharry" class="col-xs-4 col-md-4 col-sm-4 col-lg-4">
+							<section class="box" ng-click="add(book)">
+							  <img ng-src="img/{{book.img}}" class="img-responsive">
+							</section>
+						</label>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<div class="col-xs-5 col-md-4 col-sm-4 col-lg-4">
+			<div class="panel panel-primary">
+				<div id="divTotal" class="panel-heading">
+					<h3 class="panel-title">หนังสือที่เลือก</h3>
+				</div>
+				<div class="panel-body" ng-repeat="buy in selectbook">
+					<h4>{{buy.namebook}}</h4>
+					<h5>ราคา : {{buy.price}} บาท &nbsp;&nbsp; จำนวน : {{buy.amount}} เล่ม</h5>
+
+
+					<div class="text-center">
+						<a href="#" class="btn btn-danger" ng-click="deletebook($index)">Delete<span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
+					</div>
+
+				</div>
+			</div>
+
+
+			<div class="panel panel-primary">
+				<div id="divTotal" class="panel-heading">
+					<h3 class="panel-title">ราคา</h3>
+				</div>
+				<div class="panel-body">
+					<li>ราคาทั้งหมด : {{sumprice}} ฿</li>
+					<li>ส่วนลด : {{sell}} ฿</li>
+					<li>ราคาที่จ่าย : {{sumprice-sell}} ฿</li>
+
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

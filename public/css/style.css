@@ -1,0 +1,63 @@
+.box{
+  background: #ddd;
+  border: 2px solid #fff;
+  box-shadow: 0 0 3px rgba(0,0,0,0.5), inset 0 0 100px rgba(0,0,0,0.4);
+  float: left;
+  margin: 10px;
+  position: relative;
+  /*width: 190px;*/
+  transition: background 0.3s ease-out;
+}
+.box p{
+  color: #EE0000;
+  font-size: 20px;
+  line-height: 34px;
+  padding: 12px;
+  opacity: 0;
+  text-align: center;
+  text-shadow: 0 -2px 1px rgba(0,0,0,0.25), 0 2px 0 #fff;
+  position: absolute;
+  top: 0;
+
+}
+.box img{
+
+  /*width: 190px;*/
+  opacity: 0.7;
+  display: block;
+  transition: opacity 0.3s ease-in-out;
+}
+.box:hover img{
+  opacity: 1;
+}
+/* box colors */
+.box:hover p{
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+/*.box:nth-child(1):hover{
+
+  opacity: 0.5;
+}*/
+
+body {
+   padding: 50px;
+}
+
+#divTotal {
+   background-color: #43CD80;
+}
+
+.affix {
+   right: 0px;
+}
+
+.affix-top {
+   right: 0px;
+   position: fixed;
+}
+
+.logo {
+  margin-bottom: 40px;
+  letter-spacing: 0.7em;
+}
