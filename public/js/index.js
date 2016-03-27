@@ -171,7 +171,7 @@ angular.module('bookApp', [])
         return 0
       })
       $scope.amount = []
-      for (var i = 0;i < $scope.selectbook.length; i++) {
+      for (var i = 0; i < $scope.selectbook.length; i++) {
         $scope.amount.push($scope.selectbook[i].amount)
       }
       $scope.cal()
