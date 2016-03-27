@@ -77,7 +77,7 @@
 				<div class="panel-body">
 					<div class="radio">
 						<label ng-repeat="book in bookharry" class="col-xs-4 col-md-4 col-sm-4 col-lg-4">
-							<section class="box" ng-click="add(book)">
+							<section class="box" ng-click="add(book)" id="b{{$index+1}}">
 							  <img ng-src="img/{{book.img}}" class="img-responsive">
 							</section>
 						</label>
@@ -112,7 +112,7 @@
 				<div class="panel-body">
 					<li>ราคาทั้งหมด : {{sumprice}} ฿</li>
 					<li>ส่วนลด : {{sell}} ฿</li>
-					<li>ราคาที่จ่าย : {{sumprice-sell}} ฿</li>
+					<li>ราคาที่จ่าย : <div id="summary">{{sumprice-sell}}</div> ฿</li>
 
 				</div>
 			</div>
